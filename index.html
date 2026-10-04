@@ -6,17 +6,8 @@
     <title>Starskerakmi</title>
     <style>
         body {
-            /* Orqa fonga rasm qo'yish */
-            background-image: url('rasm_manzili.jpg'); 
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            
-            /* Agar rasm qorong'i bo'lmasa, matn ko'rinishi uchun ustidan qoramtir qatlam (overlay) qo'shish mumkin: */
-            background-color: rgba(0, 0, 0, 0.6);
-            background-blend-mode: darken;
-
-            color: #ffffff; /* Matn rangi oq */
+            background-color: #121212;
+            color: #ffffff;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
@@ -25,24 +16,22 @@
             align-items: center;
             min-height: 100vh;
         }
-
         h1 {
             font-size: 24px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
-
         p {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 15px;
         }
-
-        /* Tugmalarni bezash */
         .btn {
             display: block;
             width: 80%;
             max-width: 300px;
             padding: 12px;
             margin: 10px 0;
-            background-color: #0088cc; /* Telegram rangi yoki o'zingiz xohlagan rang */
+            background-color: #0088cc;
             color: white;
             text-align: center;
             text-decoration: none;
@@ -51,7 +40,6 @@
             border: none;
             cursor: pointer;
         }
-
         .btn:hover {
             background-color: #006699;
         }
@@ -59,17 +47,14 @@
 </head>
 <body>
 
-    <!-- Asosiy sarlavha -->
     <h1>Starskerakmi</h1>
-    
-    <!-- Sana va xush kelibsiz matni -->
-    <p>October 03, 2026</p>
-    <p>Xush kelibsiz!</p>
 
-    <!-- Tugmalar (ularni o'zingizga kerakli nom bilan o'zgartirasiz) -->
-    <a href="#" class="btn">Kanalga o'tish</a>
-    <a href="#" class="btn">Buyurtma berish</a>
-    <a href="#" class="btn">Bog'lanish</a>
+    <p>Sizga nechta stars kerak yoki premium?</p>
+    <p>Biror bir taklif yoki muammo yoki shikoyatingiz bo'lsa @Salohiddin_069 murojaat qiling😊</p>
+
+    <a href="https://t.me/starskerakmi_org" onclick="Telegram.WebApp.openTelegramLink('https://t.me/starskerakmi_org'); return false;" class="btn">Kanalga o'tish</a>
+    <a href="https://t.me/starslarborr_bot" onclick="Telegram.WebApp.openTelegramLink('https://t.me/starslarborr_bot'); return false;" class="btn">Buyurtma berish</a>
+    <a href="https://t.me/Salohiddin_069" onclick="Telegram.WebApp.openTelegramLink('https://t.me/Salohiddin_069'); return false;" class="btn">Bog'lanish</a>
 
 </body>
 </html>
