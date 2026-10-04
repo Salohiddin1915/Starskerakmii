@@ -1,60 +1,72 @@
-0<!DOCTYPE html>
-<html lang="uz">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Starskerakmi</title>
-    <style>
-        body {
-            background-color: #121212;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
-        h1 {
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
-        p {
-            margin-bottom: 15px;
-            text-align: center;
-            font-size: 15px;
-        }
-        .btn {
-            display: block;
-            width: 80%;
-            max-width: 300px;
-            padding: 12px;
-            margin: 10px 0;
-            background-color: #0088cc;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-        }
-        .btn:hover {
-            background-color: #006699;
-        }
-    </style>
-</head>
-<body>
+<!-- Telegram Mini App script (required for Telegram.WebApp) -->
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
 
-    <h1>Starskerakmi</h1>
+<style>
+    body {
+        background-color: #121212;
+        color: #ffffff;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        box-sizing: border-box;
+    }
+    h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    p {
+        margin-bottom: 15px;
+        text-align: center;
+        font-size: 15px;
+    }
+    .btn {
+        display: block;
+        width: 80%;
+        max-width: 300px;
+        padding: 12px;
+        margin: 10px 0;
+        background-color: #0088cc;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+    }
+    .btn:hover {
+        background-color: #006699;
+    }
+</style>
+<h1>Starskerakmi</h1>
 
-    <p>Sizga nechta stars kerak yoki premium?</p>
-    <p>Biror bir taklif yoki muammo yoki shikoyatingiz bo'lsa @Salohiddin_069 murojaat qiling😊</p>
+<p>Sizga nechta stars kerak yoki premium?</p>
+<p>Biror bir taklif yoki muammo yoki shikoyatingiz bo'lsa @Salohiddin_069 murojaat qiling😊</p>
 
-    <a href="https://t.me/starskerakmi_org" onclick="Telegram.WebApp.openTelegramLink('https://t.me/starskerakmi_org'); return false;" class="btn">Kanalga o'tish</a>
-    <a href="https://t.me/starslarbor_bot" onclick="Telegram.WebApp.openTelegramLink('https://t.me/starslarborr_bot'); return false;" class="btn">Buyurtma berish</a>
-    <a href="https://t.me/Salohiddin_069" onclick="Telegram.WebApp.openTelegramLink('https://t.me/Salohiddin_069'); return false;" class="btn">Bog'lanish</a>
+<a href="https://t.me/starskerakmi_org" onclick="return openTg(this.href)" class="btn">Kanalga o'tish</a>
+<a href="https://t.me/starslarbor_bot" onclick="return openTg(this.href)" class="btn">Buyurtma berish</a>
+<a href="https://t.me/Salohiddin_069" onclick="return openTg(this.href)" class="btn">Bog'lanish</a>
 
-</body>
-</html>
+<script>
+    const tg = window.Telegram && window.Telegram.WebApp;
+
+    // Tell Telegram the Mini App is ready and expand it to full height
+    if (tg && tg.initData) {
+        tg.ready();
+        tg.expand();
+    }
+
+    // Opens t.me links natively inside Telegram, or normally in a browser
+    function openTg(url) {
+        if (tg && tg.initData) {
+            tg.openTelegramLink(url);
+        } else {
+            window.location.href = url;
+        }
+        return false;
+    }
+</script>
